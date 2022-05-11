@@ -23,7 +23,7 @@
       "@models/*": [ "models/*" ],
       "@providers/*": [ "providers/*" ],
       "@routes/*": [ "routes/*" ],
-      "@configs/*": [ "configs/*"]
+      "@configs/*": [ "configs/*" ]
     }
   }
 }
