@@ -1,19 +1,19 @@
 import './modAlias';
 
-import { DataAccessProvider } from '@providers/DataAccessProvider'
-import { DataResponse } from '@models/DataResponse';
+import { DataAccessProvider } from '@providers/DataAccessProvider';
 
-export function cli() {
-    const cliArgs = process.argv;
-    if (cliArgs.length !== 3) {
-        console.log('Incorrect number of args passed')
-        process.exit(1);
-    }
+export function cli(): boolean {
+  const cliArgs = process.argv;
 
-    const dataP = new DataAccessProvider();
-    const resp = dataP.circArcLengths(parseInt(cliArgs[2]));
+  if (cliArgs.length !== 3) {
+    console.log('Incorrect number of args passed');
+    process.exit(1);
+  }
 
-    return resp;
+  const dataP = new DataAccessProvider();
+  const resp = dataP.circArcLengths(parseInt(cliArgs[2]));
+
+  return true;
 }
 
-console.log(cli())
+console.log(cli());

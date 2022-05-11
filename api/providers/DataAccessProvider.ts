@@ -15,11 +15,10 @@ export class DataAccessProvider {
   constructor() {}
 
   circArcLengths(totalElements: number): DataResponse[]  {
-    return Array(totalElements)
+    const calculatedArr = Array(totalElements)
       .fill(0)
       .map( (_, idx) => {
-        const timeDomain = idx * INTERVAL
-        
+        const timeDomain = idx * INTERVAL;
         return {
           x: timeDomain,
           y: this.internalSqrt(timeDomain) + VERTICAL_OFFSET,
@@ -29,10 +28,13 @@ export class DataAccessProvider {
       .filter( val => { 
         if (val.hypo % MODULUS < THRESHOLD) return val; 
       })
-      .map( val => { 
-        return { x: val.x, y: val.y }
-      })
       .splice(1);
+      
+    console.table(calculatedArr);
+
+    return calculatedArr.map( val => { 
+      return { x: val.x, y: val.y }
+    });
   }
 
   internalSqrt(interval: number): number {

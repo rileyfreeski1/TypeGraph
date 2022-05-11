@@ -22,10 +22,9 @@ export class GraphDataRoute extends BaseRoute {
         .status(200)
         .send({ payload });
     } catch (err) {
-      
       res
         .status(404)
-        .send({ err: 'Error in returning graph data' })
+        .send({ err: 'Error in returning graph data' });
     }
   }
 }

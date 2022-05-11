@@ -9,10 +9,3 @@ export const THRESHOLD = 0.51;
 export const MODULUS = 15;
 
 export const squareFunc = (val: number): number => Math.pow(val, 2);
-
-// Chart constants
-
-export const OPTIONS = {
-  selector: '#chart',
-  container: '<div id="container"><div id="chart"></div></div>'
-};
