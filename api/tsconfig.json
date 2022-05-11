@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist",
+    "sourceMap": false,
+    "declaration": false,
+    "moduleResolution": "Node",
+    "module": "CommonJs",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": false,
+    "esModuleInterop": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "ES2018",
+      "DOM"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@core/*": [ "core/*" ],
+      "@models/*": [ "models/*" ],
+      "@providers/*": [ "providers/*" ],
+      "@routes/*": [ "routes/*" ],
+      "@configs/*": [ "configs/*"]
+    }
+  }
+}
